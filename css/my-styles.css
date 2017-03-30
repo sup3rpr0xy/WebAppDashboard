@@ -1,0 +1,414 @@
+body {
+/*  text-align: center;*/
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: .75px;
+  color: #5d5b5b;
+  font-size: 12px;
+}
+
+.wrapper {
+/*  width: 80%;*/
+  padding: 20px 20px;
+/*  text-align: center;*/
+}
+
+.sub-heading {
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.big {
+  font-weight: 100;
+  font-size: 45px;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+  color: white;
+  text-align: center;
+}
+
+/* ===================
+    GRID LAYOUT
+=================== */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0px 0px auto;
+  grid-template-rows: auto 0px auto;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 0px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background: #696CB7;
+  height: 70px;
+  color: white;
+}
+
+.sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  background: #444367;
+}
+
+.main {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background: white;
+/*  height: 500px;*/
+}
+
+/* ===================
+    TOP HEADER
+=================== */
+
+.header-flex-container {
+  display: inline-flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 0 20px;
+  color: white;
+}
+
+.right-nav {
+  padding: 0 40px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  
+}
+
+/* ===================
+    SIDEBAR
+=================== */
+
+.sidebar-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sb-flex-item {
+  width: 30px;
+  height: 30px;
+  margin: 17px auto;
+}
+
+/* ===================
+    TOP TABS
+=================== */
+
+.dashboard-flex-container { 
+  height: 65px;
+  background-color: #FAFAFB;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 5;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.dashboard-title {
+/*  height: 80px;*/
+/*  line-height: 93%;*/
+  padding: 0 20px;
+  border-right: 1px solid #DFDFDF;
+  border-bottom: 1px solid white;
+  z-index: 1000;
+  display: none;
+  background-color: white;
+}
+
+.search-box {
+  padding: 0 20px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+}
+
+/* ===================
+    BAR AND PIE CHART
+=================== */
+
+.two-chart-flex-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.two-chart-flex-item {
+  padding: 20px 20px;
+  width: 100%;
+}
+
+.alert-box {
+  font-weight: 100;
+  padding: 2px 20px;
+  background-color: #686CB7;
+  border-radius: 5px;
+  color: white;
+  display: ;
+}
+
+.graph {
+  background-color: white;
+  margin-top: 35px;
+}
+
+/* ===================
+    SOCIAL STATS
+=================== */
+
+.social-flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+/* ===================
+    MEMBERS AND ACTIVITY
+=================== */
+
+.members {
+  grid-area: members;
+}
+
+.activity {
+  grid-area: activity;
+}
+
+.message-user {
+  grid-area: message-user;
+}
+
+.settings {
+  grid-area: settings;
+}
+
+.act-flex-container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-areas: 
+    "members"
+    "activity"
+    "message-user"
+    "settings"
+}
+
+/* ===================
+    CHARTS
+=================== */
+
+.myChart {
+  width: 100%;
+  
+}
+#myChart {
+  width: 300px;
+  height: auto;
+}
+
+.contain-all {
+  width: 1196px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #DADADA;
+}
+
+.m-flex-item {
+}
+
+.light {
+  font-weight: 100;
+}
+
+h2 {
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.bell {
+  height: 25px;
+  width: 25px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-right: 1px solid #5257B7;
+}
+
+.dog {
+  height: 35px;
+  width: 35px;
+  margin-left: 15px;
+  border-radius: 100%;
+}
+
+.name {
+  margin-left: 10px;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+
+/* ===================
+    SEARCH FORM
+=================== */
+
+input[type=text] {
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #DFDFDF;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 100;
+  background-color: white;
+  padding: 12px 20px 12px 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text].search-box::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #DFDFDF;
+}
+input[type=text].search-box::-moz-placeholder { /* Firefox 19+ */
+  color: #DFDFDF;
+}
+input[type=text].search-box:-ms-input-placeholder { /* IE 10+ */
+  color: #DFDFDF;
+}
+input[type=text].search-box:-moz-placeholder { /* Firefox 18- */
+  color: #DFDFDF;
+}
+
+.search-button {
+  position: relative;
+  top: 5px;
+  right: 34px;
+  width: 20px;
+  height: auto;
+}
+form {
+  position: relative;
+}
+
+.alert {
+  font-weight: 400;
+  font-size: 16px;
+  padding-right: 12px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 42px;
+  cursor: pointer;
+  transform: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+.sub-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.line-dates {
+
+}
+
+.date-links {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #76C284;
+  border-radius: 30px;
+  color: white;
+}
+
+.date-links:hover {
+  color: black;
+}
+
+.bar-chart-div {
+  border-right: 1px solid #DFDFDF;;
+}
+
+.label {
+  margin-bottom: 20px;
+}
+
+.act-flex-item {
+
+  
+}
+
+.s-flex-item {
+  display: flex;
+  padding: 20px 20px;
+  margin: 0 10px;
+  text-align: center;
+  flex-grow: 1;
+  background-color: #FAFAFB;
+  border-radius: 5px;
+  border: 1px solid #DFDFDF;
+  align-items: center;
+  
+}
+
+.circle-twitter {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #686CB7;
+  margin-right: 20px;
+}
+
+.twitter {
+
+}
+
+.social-name {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #686CB7;
+  text-align: left;
+}

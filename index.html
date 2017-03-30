@@ -1,0 +1,217 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>My Own Work</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/my-styles.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+</head>
+<body>
+ 
+  <!-- Container For All -->
+  
+<div class="contain-all"> 
+      
+      <div class="grid-container">
+        <!-- Header -->
+        <div class="grid-item header">
+          <div class="header-flex-container">
+            <div class="h-flex-item logo">
+              <h2>Your<span class="light">App&trade;</span></h2>
+            </div>
+            <div class="h-flex-item right-nav">
+              <div class="right-nav-items bell">
+                <img src="/icons/icon-bell.svg" alt="Bell">
+              </div>
+              <div class="right-nav-items">
+                <img class="dog" src="/img/dog.jpg" alt="Doggy Style">
+              </div>
+              <div class="right-nav-items">
+                <span class="name">Alfred Torres</span>
+              </div>
+            </div>
+          </div>
+        </div>  
+        
+        <!-- Sidebar -->
+        <div class="grid-item sidebar">
+          <div class="sidebar-flex-container">
+            <div class="sb-flex-item icon1">
+              <img src="/icons/icon-dashboard.svg" alt="Dashboard Icon">
+            </div>
+            <div class="sb-flex-item icon2">
+              <img src="/icons/icon-members.svg" alt="Members Icon">
+            </div>
+            <div class="sb-flex-item icon3">
+              <img src="/icons/icon-visits.svg" alt="Visits Icon">
+            </div>
+            <div class="sb-flex-item icon4">
+              <img src="/icons/icon-settings.svg" alt="Settings Icon">
+            </div>
+          </div>
+        </div>
+              
+        <!-- Main Section -->
+        <div class="grid-item main">
+          <div class="dashboard-flex-container">
+            <div class="m-flex-item dashboard-title">
+              <h3>Dashboard</h3>
+            </div>
+            <div class="m-flex-item search-box">
+              <div>
+                <form>
+                  <input class="search-box" type="text" placeholder="Search..." required>
+                  <img class="search-button" src="/icons/search.svg" alt="Search Button">
+                </form>
+              </div>
+              <div>
+                
+              </div>
+              
+            </div>
+          </div>
+                
+          <!-- Wrapper -->
+          <div class="wrapper">
+            <!-- Alert Box -->
+            <div class="alert-box">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <p><span class="alert">Alert</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit consequuntur quae, libero repellendus at.</p>
+            </div>
+    
+            <!-- Line Chart -->        
+            <div class="graph">
+              <div class="sub-heading-container">
+                <div><span class="sub-heading">Line Chart</span></div>
+                <div class="line-dates">
+                  <span><a class="date-links" href="#">Hourly</a></span>
+                  <span><a class="date-links" href="#">Daily</a></span>
+                  <span><a class="date-links" href="#">Weekly</a></span>
+                  <span><a class="date-links" href="#">Monthly</a></span>
+                </div>
+              </div>
+              
+              <canvas id="myChart"></canvas>
+            </div>
+          </div><!-- End Main Section Wrapper -->
+           
+            <!-- Bar and Pie Chart -->
+            <div class="two-chart-flex-container">
+              <div class="two-chart-flex-item bar-chart-div">
+                <span class="sub-heading">Bar Chart</span>
+                <canvas id="myBarChart"></canvas>
+              </div>
+              <div class="two-chart-flex-item">
+                <span class="sub-heading">Pie Chart</span>
+                <canvas id="myPieChart"></canvas>
+              </div>
+            </div>
+            
+            <div class="wrapper">
+            <div class="label">
+              <span class="sub-heading">Social Stats</span>
+            </div>
+            <div class="social-flex-container">
+              <div class="s-flex-item twitter">
+                <div class="circle-twitter">
+                
+                </div>
+                <div>
+                  <span class="social-name">Twitter</span>
+                  <span class="big">10,345</span>
+                </div>
+              </div>
+              <div class="s-flex-item twitter">
+                <div class="circle-twitter">
+                
+                </div>
+                <div>
+                  <span class="social-name">Facebook</span>
+                  <span class="big">10,345</span>
+                </div>
+              </div>
+              <div class="s-flex-item twitter">
+                <div class="circle-twitter">
+                
+                </div>
+                <div>
+                  <span class="social-name">Google+</span>
+                  <span class="big">10,345</span>
+                </div>
+              </div>
+              
+                
+            </div>
+          </div>  
+            <!-- Members and Activity -->
+            <div class="act-flex-container">
+             
+              <div class="act-flex-item members">
+                <span class="sub-heading">New Members</span>
+                
+                 <!-- Member Entry -->                 
+                 <div class="member-entry">
+                  <div class="profile-pic">
+                    
+                  </div>
+                  <div class="contact-details">
+                    <span>Victoria Chambers</span>
+                    <span>victoria.chambers80@example.com</span>
+                  </div>
+                  <div class="date">
+                    <span>10/15/15</span>
+                  </div>
+                </div>
+                
+                <!-- Another Member Entry -->
+                <div class="member-entry">
+                  <div class="profile-pic">
+                    
+                  </div>
+                  <div class="contact-details">
+                    <span>Dale Byrd</span>
+                    <span>date.byrd52@example.com</span>
+                  </div>
+                  <div class="date">
+                    <span>10/15/15</span>
+                  </div>
+                </div>
+                
+                
+              </div>
+              
+              <div class="act-flex-item activity">
+                <span class="sub-heading">Recent Activity</span>
+              </div>
+              <div class="act-flex-item message-user">
+                <span class="sub-heading">Message User</span>
+              </div>
+              <div class="act-flex-item settings">
+                <span class="sub-heading">Settings</span>
+              </div>
+            </div>
+                  
+                  
+          
+        </div><!-- End Main Section -->
+      </div><!-- End Container For All -->
+      
+      </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  
+  <!-- Chart JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+  <script>
+      var myChart = new Chart({...})
+  </script>
+  
+  <!-- My Javascript -->
+  <script type="text/javascript" src="/js/my-styles.js"></script>
+</body>
+</html>
