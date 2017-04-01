@@ -16,6 +16,8 @@ body {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  display: block;
+/*  margin-bottom: 20px;*/
 }
 
 .big {
@@ -146,7 +148,6 @@ svg {
 }
 
 .search-box {
-  padding: 0 20px;
   border-radius: 5px;
   display: inline-flex;
   align-content: center;
@@ -192,6 +193,7 @@ svg {
   flex-direction: row;
   justify-content: center;
   align-content: center;
+  margin-bottom: 15px;
 }
 
 /* ===================
@@ -200,6 +202,7 @@ svg {
 
 .members {
   grid-area: members;
+  border-right: 1px solid #DFDFDF;
 }
 
 .activity {
@@ -215,6 +218,7 @@ svg {
 }
 
 .act-flex-container {
+  border-top: 1px solid #DFDFDF;
   display: grid;
   grid-gap: 0;
   grid-template-areas: 
@@ -376,8 +380,7 @@ form {
 }
 
 .act-flex-item {
-
-  
+  padding: 20px 20px; 
 }
 
 .s-flex-item {
@@ -411,4 +414,56 @@ form {
   font-weight: 700;
   color: #686CB7;
   text-align: left;
+}
+
+.member-entry {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DFDFDF;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  display: block;
+}
+
+.cat-photo-profile-pic {
+  width: 40px;
+  height: auto;
+  border-radius: 100%;
+  border: 1px solid grey;
+}
+
+.contact-details span {
+  
+}
+
+.top-info {
+  display: block;
+  font-size: 14px;
+}
+
+.bottom-info {
+  display: block;
+  color: #686CB7;
+}
+
+.contact-details {
+  margin-left: 15px;
+  
+}
+
+.date {
+  text-align: right;
+  width: 100%;
+}
+
+.message-user-form {
+  padding: 0 20px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
 }
