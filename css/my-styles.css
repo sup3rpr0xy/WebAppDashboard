@@ -218,7 +218,7 @@ svg {
 }
 
 .act-flex-container {
-  border-top: 1px solid #DFDFDF;
+/*  border-top: 1px solid #DFDFDF;*/
   display: grid;
   grid-gap: 0;
   grid-template-areas: 
@@ -290,7 +290,7 @@ h3 {
     SEARCH FORM
 =================== */
 
-input[type=text] {
+.search-box input[type=text] {
   width: 300px;
   box-sizing: border-box;
   border: 1px solid #DFDFDF;
@@ -380,7 +380,12 @@ form {
 }
 
 .act-flex-item {
-  padding: 20px 20px; 
+  padding: 20px 20px;
+  border-top: 1px solid #DFDFDF;
+}
+
+.act-flex-item:nth-child(odd) {
+  border-right: 1px solid #DFDFDF;
 }
 
 .s-flex-item {
@@ -420,9 +425,13 @@ form {
   display: inline-flex;
   align-items: center;
   width: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #DFDFDF;
   margin-top: 20px;
+}
+
+.act-flex-container .member-entry:last-of-type {
+  border-bottom: 0;
 }
 
 .profile-pic {
@@ -460,10 +469,177 @@ form {
   width: 100%;
 }
 
-.message-user-form {
-  padding: 0 20px;
-  border-radius: 5px;
-  display: inline-flex;
-  align-content: center;
+/* ===================
+    MESSAGE USER FORM
+=================== */
+
+.message-user-box input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #DFDFDF;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 100;
+  background-color: #FAFAFB;
+  padding: 12px 20px 12px 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.message-user-box input::placeholder {
+  color: #BEBEBE;
+}
+
+input[type=text].search-box::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #DFDFDF;
+}
+input[type=text].search-box::-moz-placeholder { /* Firefox 19+ */
+  color: #DFDFDF;
+}
+input[type=text].search-box:-ms-input-placeholder { /* IE 10+ */
+  color: #DFDFDF;
+}
+input[type=text].search-box:-moz-placeholder { /* Firefox 18- */
+  color: #DFDFDF;
+}
+
+.message-user-box form {
+  width: 100%;
+}
+.message-user-box {
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+input {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.send-button {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #686CB7;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  border: none;
+}
+
+.textfield {
+  height: 150px;
+}
+
+/* ===================
+    SETTINGS
+=================== */
+
+
+.email-notif-toggle {
+  display: flex;
+  margin-top: 20px;
   align-items: center;
+}
+
+
+
+/* OTHER */
+
+.setting-message {
+  margin-right: 40px;
+}
+
+/* ===================
+    ON/OFF Switch
+=================== */
+
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #C3C4C7; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #696CB7; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #C3C4C7; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+/* Dropdown */
+
+.dropdown {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 100;
+  border: 1px solid #DFDFDF;
+  background-color: #FAFAFB;
+  color: #BEBEBE;
+}
+
+/* Save/Candcel Buttons */
+
+.save-button {
+  display: inline;
+  float: left;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #686CB7;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  width: 48%;
+  border: none;
+}
+
+.cancel-button {
+  display: inline;
+  float: right;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #A9A9A9;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  width: 48%;
+  border: none;
 }

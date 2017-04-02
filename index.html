@@ -274,21 +274,65 @@
               <div class="act-flex-item message-user">
                 <span class="sub-heading">Message User</span>
                 
-              <div class="">
-                <div>
+                <div class="message-user-box">
                   <form>
-                    <input class="message-user-form" type="text" placeholder="Search..." required>
-                    <img class="search-button" src="/icons/search.svg" alt="Search Button">
+                    <input class="message-user-form" type="text" placeholder="Search for User">
+                    <input class="message-user-form textfield" type="text" placeholder="Message for User">
+                    <button class="send-button">SEND</button>
                   </form>
-                </div>
-              <div>
-                
+                </div><!-- End Mesage User Box -->
               </div>
               
-            </div>
-              </div>
+              <!-- Setting Section -->
               <div class="act-flex-item settings">
                 <span class="sub-heading">Settings</span>
+                
+                <div class="email-notif-toggle">
+                  <div class="setting-message">
+                    <span>Send Email Notifications</span>
+                  </div>
+                  <div>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchone" checked>
+                        <label class="onoffswitch-label" for="myonoffswitchone">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="email-notif-toggle">
+                  <div class="setting-message">
+                    <span>Send Email Notifications</span>
+                  </div>
+                  <div>
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchtwo" checked>
+                        <label class="onoffswitch-label" for="myonoffswitchtwo">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Dropdown -->
+                <div>
+                  <form>
+                    <select class="dropdown" name="cars">
+                      <option value="volvo">Select Timezone</option>
+                      <option value="saab">USA</option>
+                      <option value="fiat">Asia</option>
+                      <option value="audi">Europe</option>
+                    </select>
+                  </form>                  
+                </div>
+                <div class="setting-buttons">
+                  <button class="save-button">SEND</button>
+                  <button class="cancel-button">CANCEL</button>              
+                </div>
+                
               </div>
             </div>
                   
