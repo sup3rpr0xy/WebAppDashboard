@@ -1,20 +1,82 @@
-/* ===================
-    MEDIA QUERIES
-=================== */
-
 @media screen and (min-width: 320px) {
+  /* ===================
+    TOP HEADER
+  =================== */
+
+  .header-flex-container {
+    display: inline-flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+/*    text-align: center;*/
+    justify-content: space-around;
+    background-color: #696CB7;
+  }
+
+  .logo {
+    padding: 0 20px;
+    color: white;
+  }
+  
+  .name {
+    color: white;
+  }
+
+  .right-nav {
+/*    padding: 0 0px;*/
+    display: flex;
+/*
+    align-content: flex-end;
+    align-items: flex-end;
+*/
+  }
+  
+  
+  .two-chart-flex-item {
+    padding: 10px 10px;
+    width: 100%;
+  }
   
   .wrapper {
   padding: 10px 10px;
   }
+  
+  .sidebar {
+    display: none;
+  }
 
   .search-box {
-    margin-left: 20px;  
+    margin-left: 10px;  
   }
   
   .header-flex-container {
     width: auto;
   }
+  
+  .social-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .s-flex-item {
+    margin: 10px 0;
+  }
+  
+  .date-links {
+    display: none;
+  }
+  
+  .act-flex-item {
+    padding: 20px 10px;
+    border-top: 1px solid #DFDFDF;
+  }
+  
+  .members {
+    border-right: 0px solid white;
+  }
+  
   
   /* ===================
     TOP HEADER
@@ -47,58 +109,84 @@
 
 @media screen and (min-width: 768px) {
   
+  .right-nav {
+    padding: 0 40px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .members {
+    grid-area: members;
+    border-right: 1px solid #DFDFDF;
+  }
+  
+  .act-flex-item {
+    padding: 20px 20px;
+    border-top: 1px solid #DFDFDF;
+  }
+  
+  .search-box {
+    margin-left: 20px;  
+  }
+  
+  .two-chart-flex-item {
+    padding: 20px 20px;
+    width: 100%;
+  }
+  
   /* ===================
     GRID LAYOUT
-=================== */
+  =================== */
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 0px 0px auto;
-  grid-template-rows: auto 0px auto;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0px 0px auto;
+    grid-template-rows: auto 0px auto;
+  }
 
-.grid-item {
-  background-color: white;
-  padding: 0px;
-}
+  .grid-item {
+    background-color: white;
+    padding: 0px;
+  }
 
-.header {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background: #696CB7;
-  height: 70px;
-  color: white;
-}
+  .header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: #696CB7;
+    height: 70px;
+    color: white;
+  }
 
-.sidebar {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 6;
-  background: #444367;
-}
+  .sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    background: #444367;
+  }
 
-.main {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  background: white;
-}
+  .main {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: white;
+  }
   
   .wrapper {
-  padding: 20px 20px;
+    padding: 20px 20px;
   }
   
   .header-flex-container {
-  display: inline-flex;
-  align-items: center;
-  height: 70px;
-  width: 100%;
-  text-align: center;
-  justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
   }
   
   .grid-container {
@@ -153,28 +241,32 @@
     font-size: 12px;
   }
   
+  .sidebar {
+    display: block;
+  }
+  
 }
 
 @media screen and (min-width: 1024px) {
   
   .contain-all {
-  width: 1196px;
-  height: auto;
-  margin: 0 auto;
-  border: 1px solid #DADADA;
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #DADADA;
   }
   
   .top-info {
-  display: block;
-  font-size: 14px;
+    display: block;
+    font-size: 14px;
   }
   
   .contact-details {
-  margin-left: 15px;
+    margin-left: 15px;
   }
   
   .bottom-info {
-  display: block;
+    display: block;
   }
   
   .s-flex-item {
@@ -193,8 +285,6 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-  
-  
   
   .social-flex-container {
     display: inline-flex;
