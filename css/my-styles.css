@@ -6,18 +6,11 @@ body {
   font-size: 12px;
 }
 
-.wrapper {
-/*  width: 80%;*/
-  padding: 20px 20px;
-/*  text-align: center;*/
-}
-
 .sub-heading {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   display: block;
-/*  margin-bottom: 20px;*/
 }
 
 .big {
@@ -34,48 +27,6 @@ svg {
   height: 50px;
   color: white;
   text-align: center;
-}
-
-/* ===================
-    GRID LAYOUT
-=================== */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 0px 0px auto;
-  grid-template-rows: auto 0px auto;
-}
-
-.grid-item {
-  background-color: white;
-  padding: 0px;
-}
-
-.header {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background: #696CB7;
-  height: 70px;
-  color: white;
-}
-
-.sidebar {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 3;
-  grid-row-end: 6;
-  background: #444367;
-}
-
-.main {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  background: white;
-/*  height: 500px;*/
 }
 
 /* ===================
@@ -147,13 +98,6 @@ svg {
   background-color: white;
 }
 
-.search-box {
-  border-radius: 5px;
-  display: inline-flex;
-  align-content: center;
-  align-items: center;
-}
-
 /* ===================
     BAR AND PIE CHART
 =================== */
@@ -189,7 +133,7 @@ svg {
 =================== */
 
 .social-flex-container {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
@@ -241,16 +185,6 @@ svg {
   height: auto;
 }
 
-.contain-all {
-  width: 1196px;
-  height: auto;
-  margin: 0 auto;
-  border: 1px solid #DADADA;
-}
-
-.m-flex-item {
-}
-
 .light {
   font-weight: 100;
 }
@@ -287,8 +221,14 @@ h3 {
 
 
 /* ===================
-    SEARCH FORM
+    TOP SEARCH BOX
 =================== */
+
+.search-box {
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+}
 
 .search-box input[type=text] {
   width: 300px;
@@ -301,6 +241,11 @@ h3 {
   padding: 12px 20px 12px 10px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+  margin: 0px auto;
+}
+
+.search-box input::placeholder {
+  color: #BEBEBE;
 }
 
 input[type=text].search-box::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -327,6 +272,10 @@ form {
   position: relative;
 }
 
+
+
+
+
 .alert {
   font-weight: 400;
   font-size: 16px;
@@ -352,10 +301,6 @@ form {
   justify-content: space-between;
   align-content: flex-end;
   align-items: flex-end;
-}
-
-.line-dates {
-
 }
 
 .date-links {
@@ -401,7 +346,7 @@ form {
   
 }
 
-.circle-twitter {
+.circle-twitter, .circle-facebook, .circle-google {
   width: 70px;
   height: 70px;
   border-radius: 100%;
@@ -473,7 +418,7 @@ form {
     MESSAGE USER FORM
 =================== */
 
-.message-user-box input[type=text] {
+.message-user-box input[type=text], .message-user-box textarea[name=textarea] {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #DFDFDF;
@@ -486,7 +431,7 @@ form {
   transition: width 0.4s ease-in-out;
 }
 
-.message-user-box input::placeholder {
+.message-user-box input::placeholder, .message-user-box textarea::placeholder {
   color: #BEBEBE;
 }
 
@@ -503,17 +448,15 @@ input[type=text].search-box:-moz-placeholder { /* Firefox 18- */
   color: #DFDFDF;
 }
 
-.message-user-box form {
-  width: 100%;
-}
 .message-user-box {
   margin-top: 20px;
   padding-bottom: 40px;
 }
 
-input {
+input, textarea {
   display: inline-block;
   margin-bottom: 15px;
+  resize: none;
 }
 
 .send-button {
@@ -528,10 +471,6 @@ input {
   border: none;
 }
 
-.textfield {
-  height: 150px;
-}
-
 /* ===================
     SETTINGS
 =================== */
@@ -539,7 +478,7 @@ input {
 
 .email-notif-toggle {
   display: flex;
-  margin-top: 20px;
+  margin-top: 25px;
   align-items: center;
 }
 
@@ -549,6 +488,7 @@ input {
 
 .setting-message {
   margin-right: 40px;
+  width: 50%;
 }
 
 /* ===================
@@ -605,7 +545,7 @@ input {
 
 .dropdown {
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   border-radius: 4px;
   width: 100%;
   height: 40px;
@@ -642,4 +582,65 @@ input {
   color: white;
   width: 48%;
   border: none;
+}
+
+.circle-twitter svg {
+  position: relative;
+  top: 19px;
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  fill: white;
+  text-align: center;
+}
+
+.circle-facebook svg {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  fill: white;
+  text-align: center;
+}
+
+.circle-google svg {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  width: 40px;
+  height: auto;
+  fill: white;
+  text-align: center;
+}
+
+/* ===================
+    RECENT ACTIVITY
+=================== */
+
+.act-flex-item .contact-details {
+  width: 100%;
+}
+
+.activity-entry {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DFDFDF;
+  margin-top: 20px;
+}
+
+.activity-bottom-info {
+  display: block;
+  color: #686CB7;
+}
+
+.activity-date {
+  text-align: right;
+  width: 20%;
+}
+
+.right-arrow {
+  font-size: 20px;
 }
