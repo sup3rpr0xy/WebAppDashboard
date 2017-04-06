@@ -1,53 +1,87 @@
+// Variables
+var ctx = document.getElementById('myChart').getContext('2d');
 var ctb = document.getElementById("myBarChart").getContext('2d');
 var ctp = document.getElementById("myPieChart").getContext('2d');
-var ctx = document.getElementById('myChart').getContext('2d');
 
-Chart.defaults.global.defaultFontSize = 12;
-Chart.defaults.global.responsive = true;
-//Chart.defaults.global.layout.padding = 10;
-//Chart.defaults.global.layout.padding = 60;
-Chart.defaults.global.defaultColor = "rgba(rgb(210, 19, 210), 0.4)"
-Chart.defaults.global.elements.arc.backgroundColor = 'rgb(104, 108, 183, 0.4)'; 
-Chart.defaults.global.elements.line.borderColor = 'rgb(104, 108, 183, 0.4)'; 
- 
-var myChartL = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['16-22', '23-29', '30-5', 'T', 'F', 'S', 'S'],
-    datasets: [
-      {
-        label: 'apples',
-        data: [700, 1000, 1500, 1300, 500, 1100, 1800],
-        backgroundColor: "rgba(153,255,51,0.4)",
-        lineTension: 0,
-        pointRadius: 5, 
-//        pointBorderColor: ; 
-      }, 
-      { /* This dataset is for deletion */
-        label: 'oranges',
-        data: [2, 29, 5, 5, 2, 3, 10],
-        backgroundColor: 'rgba(0, 0, 0, 0.1)'
-      }
-    ] 
-  },
-  options: {
-    title: {
-      display: true, 
-      text: 'Custom Chart Title Test',
-      position: 'left',
-      fontSize: 20
+// Line Chart
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            lineTension: 0,
+            borderWidth: 1,
+            pointStyle: 'circle',
+            pointRadius: 5,
+            pointBorderWidth: 3,
+            pointBackgroundColor: "rgba(255, 255, 255, 1)",
+            data: [{
+                x: 0,
+                y: 0
+            }, {
+                x: 5,
+                y: 10
+            }, {
+                x: 10,
+                y: 15
+            }, {
+                x: 15,
+                y: 20
+            },  {
+                x: 20,
+                y: 30
+            }, {
+                x: 25,
+                y: 50
+            }, {
+                x: 30,
+                y: 40
+            }, {
+                x: 35,
+                y: 50
+            },  {
+                x: 40,
+                y: 60
+            }, {
+                x: 45,
+                y: 65
+            }, {
+                x: 70,
+                y: 40
+            }, {
+                x: 80,
+                y: 50
+            }],
+            backgroundColor: [
+                'rgba(115, 119, 191, 0.30)'
+            ],
+          borderColor: [
+                'rgba(115, 119, 191, 1)'
+            ],
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        },
+        legend: {
+            display: false
+        }
     }
-  }
 });
 
+// Bar Chart
 var myChartB = new Chart(ctb, {
   type: 'bar',
   data: {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     datasets: [{
       label: 'apples',
-      data: [40, 90, 170, 120, 220, 200, 70],
-      backgroundColor: "rgba(153,255,51,0.4)"
+      data: [40, 100, 170, 120, 220, 200, 70],
+      backgroundColor: 'rgba(115, 119, 191, 1)',
+      barThickness: 8
     }]
   }, 
   options: {
@@ -55,25 +89,46 @@ var myChartB = new Chart(ctb, {
       yAxes: [{
         stacked: true
       }]
+    },
+    legend: {
+      display: false
     }
   }
 });
 
+// Pie Chart
 var myChartP = new Chart(ctp, {
-  type: 'pie',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    datasets: [{
-      label: 'apples',
-      data: [12, 19, 3, 17, 6, 3, 7],
-      backgroundColor: "rgba(153,255,51,0.4)"
-    }, {
-      label: 'oranges',
-      data: [2, 29, 5, 5, 2, 3, 10],
-      backgroundColor: "rgba(255,153,0,0.4)"
-    }]
-  }, 
-  options: {
-    cutoutPercentage: 40
-  }
+    type: 'doughnut',
+    data: {
+    labels: [
+        "Phones",
+        "Tablets",
+        "Desktops"
+    ],
+    datasets: [
+        {
+            data: [300, 50, 100],
+            backgroundColor: [
+                "#81C98F",
+                "#74B1BF",
+                "#7377BF"
+            ],
+            hoverBackgroundColor: [
+                "#81C98F",
+                "#74B1BF",
+                "#7377BF"
+            ]
+        }]
+    },
+    options: {
+        legend: {
+            position: 'right',
+            labels: { //The labels key is nested below the legend configuration
+                boxWidth: 15,
+                fontSize: 14
+            }
+        }
+    }
+    
 });
+

@@ -3,12 +3,26 @@
 <head>
   <title>My Own Work</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/my-styles.css">
   <link rel="stylesheet" href="css/responsive.css">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+  
+  <!--  Form Validation-->
+  <script type="text/javascript">  
+    function validateForm() {
+      var x = document.myForm.usersearch.value;
+      var y = document.myForm.textarea.value;
+      if (x == "" || y == "") {
+        alert("You need to complete the two forms below. Key in the User's name and a Message for the User");
+        return false;
+      } else {
+        alert("Thanks for sending a message");
+      }
+    }
+  </script>
 </head>
 <body>
 
@@ -29,6 +43,7 @@
             <div class="h-flex-item right-nav">
               <div class="right-nav-items bell">
                 <img src="icons/icon-bell.svg" alt="Bell">
+                <span class="badge"></span>
               </div>
               <div class="right-nav-items">
                 <img class="dog" src="img/dog.jpg" alt="Doggy Style">
@@ -94,7 +109,7 @@
                 </div>
               </div>
               
-<!--              <canvas id="myChart"></canvas>-->
+              <canvas id="myChart"></canvas>
             </div>
           </div><!-- End Main Section Wrapper -->
            
@@ -102,11 +117,11 @@
           <div class="two-chart-flex-container">
             <div class="two-chart-flex-item bar-chart-div">
               <span class="sub-heading">Bar Chart</span>
-<!--                <canvas id="myBarChart"></canvas>-->
+                <canvas id="myBarChart"></canvas>
             </div>
             <div class="two-chart-flex-item">
               <span class="sub-heading">Pie Chart</span>
-<!--                <canvas id="myPieChart"></canvas>-->
+                <canvas id="myPieChart"></canvas>
             </div>
           </div>
             
@@ -301,10 +316,10 @@
             <span class="sub-heading">Message User</span>
 
             <div class="message-user-box">
-              <form>
-                <input class="message-user-form" type="text" placeholder="Search for User">
+              <form name="myForm" action="#" onsubmit="return validateForm()">
+                <input name="usersearch" class="message-user-form" type="text" placeholder="Search for User" >
                 <textarea name="textarea" id="textarea" cols="30" rows="5" placeholder="Message for User"></textarea>
-                <button class="send-button">SEND</button>
+                <button type="submit" value="Submit" class="send-button">SEND</button>
               </form>
             </div>
           </div><!-- End Message User -->
@@ -375,6 +390,6 @@
   </script>
   
   <!-- My Graph Javascript -->
-  <script type="text/javascript" src="/js/my-styles.js"></script>
-</body>
+  <script type="text/javascript" src="js/my-styles.js"></script>
+</body> 
 </html>

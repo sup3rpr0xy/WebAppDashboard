@@ -1,4 +1,10 @@
 @media screen and (min-width: 320px) {
+  
+  .bar-chart-div {
+    border-right: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+  }
+  
   /* ===================
     TOP HEADER
   =================== */
@@ -104,10 +110,43 @@
 
   }
   
+  #myChart, #myBarChart, #myPieChart {
+    width: 100%;
+    height: auto;
+  }
+  
+  .two-chart-flex-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+  }
+  
     
 }
 
 @media screen and (min-width: 768px) {
+  
+    .date-links {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #76C284;
+    border-radius: 30px;
+    color: white;
+  }
+  
+    .bar-chart-div {
+      border-bottom: none;
+    }
+  
+  .two-chart-flex-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+  }
   
   .right-nav {
     padding: 0 40px;
